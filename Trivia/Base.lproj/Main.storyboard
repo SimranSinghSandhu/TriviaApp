@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="109"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="gV7-vo-CLD">
+            <objects>
+                <viewController storyboardIdentifier="questionVC" id="OLg-XV-RT8" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BdC-3g-BJH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Who is the best cricketer?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-ZK-HdU">
+                                <rect key="frame" x="18" y="100" width="339" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qR8-bv-2ND"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maa-Oi-clC">
+                                <rect key="frame" x="18" y="567" width="339" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NDr-of-qow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="handleNextBtn:" destination="OLg-XV-RT8" eventType="touchUpInside" id="Iu8-ia-3kR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JB2-ob-6VZ">
+                                <rect key="frame" x="42" y="180" width="291" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf1-6I-Jau">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="aWX-BU-E4H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleOptionBtn:" destination="OLg-XV-RT8" eventType="touchUpInside" id="CcG-6q-1xH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-oP-cnI">
+                                        <rect key="frame" x="0.0" y="70" width="291" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JKN-iC-7bB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleOptionBtn:" destination="OLg-XV-RT8" eventType="touchUpInside" id="ev0-vF-Acf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVS-La-nGY">
+                                        <rect key="frame" x="0.0" y="140" width="291" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ev4-7e-tSz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleOptionBtn:" destination="OLg-XV-RT8" eventType="touchUpInside" id="wRJ-la-gcb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG6-kf-gVQ">
+                                        <rect key="frame" x="0.0" y="210" width="291" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="m9J-22-PMt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleOptionBtn:" destination="OLg-XV-RT8" eventType="touchUpInside" id="ENd-Ow-a6S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mf1-6I-Jau" firstAttribute="top" secondItem="JB2-ob-6VZ" secondAttribute="top" id="Bte-Fl-ao6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mf1-6I-Jau" secondAttribute="trailing" id="Hst-Fh-9nv"/>
+                                    <constraint firstItem="Pf8-oP-cnI" firstAttribute="leading" secondItem="JB2-ob-6VZ" secondAttribute="leading" id="Iw6-M4-FqD"/>
+                                    <constraint firstItem="Mf1-6I-Jau" firstAttribute="leading" secondItem="JB2-ob-6VZ" secondAttribute="leading" id="KzV-v2-Gnf"/>
+                                    <constraint firstItem="lG6-kf-gVQ" firstAttribute="top" secondItem="SVS-La-nGY" secondAttribute="bottom" constant="30" id="STC-Fc-6Ui"/>
+                                    <constraint firstAttribute="trailing" secondItem="SVS-La-nGY" secondAttribute="trailing" id="bJp-NU-qQI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pf8-oP-cnI" secondAttribute="trailing" id="dDZ-qb-E9s"/>
+                                    <constraint firstAttribute="trailing" secondItem="lG6-kf-gVQ" secondAttribute="trailing" id="eDg-Gc-duH"/>
+                                    <constraint firstItem="lG6-kf-gVQ" firstAttribute="leading" secondItem="JB2-ob-6VZ" secondAttribute="leading" id="gOg-P7-Kv9"/>
+                                    <constraint firstItem="Pf8-oP-cnI" firstAttribute="top" secondItem="Mf1-6I-Jau" secondAttribute="bottom" constant="30" id="okq-Wr-7Os"/>
+                                    <constraint firstItem="SVS-La-nGY" firstAttribute="leading" secondItem="JB2-ob-6VZ" secondAttribute="leading" id="sji-jB-sz6"/>
+                                    <constraint firstItem="SVS-La-nGY" firstAttribute="top" secondItem="Pf8-oP-cnI" secondAttribute="bottom" constant="30" id="ymM-ai-khM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MAE-ZK-HdU" firstAttribute="leading" secondItem="Pdr-In-b2Z" secondAttribute="leading" constant="18" id="0Xf-jo-4YD"/>
+                            <constraint firstItem="JB2-ob-6VZ" firstAttribute="leading" secondItem="Pdr-In-b2Z" secondAttribute="leading" constant="42" id="3xB-Cq-L9I"/>
+                            <constraint firstItem="Pdr-In-b2Z" firstAttribute="bottom" secondItem="maa-Oi-clC" secondAttribute="bottom" constant="50" id="RaQ-us-AhK"/>
+                            <constraint firstItem="Pdr-In-b2Z" firstAttribute="trailing" secondItem="JB2-ob-6VZ" secondAttribute="trailing" constant="42" id="Sny-ZT-Qtc"/>
+                            <constraint firstItem="maa-Oi-clC" firstAttribute="leading" secondItem="Pdr-In-b2Z" secondAttribute="leading" constant="18" id="asO-pf-7hk"/>
+                            <constraint firstItem="JB2-ob-6VZ" firstAttribute="top" secondItem="MAE-ZK-HdU" secondAttribute="bottom" constant="30" id="c5Z-k1-ggc"/>
+                            <constraint firstItem="Pdr-In-b2Z" firstAttribute="trailing" secondItem="maa-Oi-clC" secondAttribute="trailing" constant="18" id="cJJ-0G-zQY"/>
+                            <constraint firstItem="MAE-ZK-HdU" firstAttribute="top" secondItem="Pdr-In-b2Z" secondAttribute="top" constant="100" id="duM-zt-gqX"/>
+                            <constraint firstItem="Pdr-In-b2Z" firstAttribute="trailing" secondItem="MAE-ZK-HdU" secondAttribute="trailing" constant="18" id="nGz-dT-5Of"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pdr-In-b2Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="maa-Oi-clC" id="gVW-bb-xJz"/>
+                        <outlet property="questionLabel" destination="MAE-ZK-HdU" id="rtU-qv-URm"/>
+                        <outletCollection property="optionBtns" destination="Mf1-6I-Jau" collectionClass="NSMutableArray" id="8dE-jY-beV"/>
+                        <outletCollection property="optionBtns" destination="Pf8-oP-cnI" collectionClass="NSMutableArray" id="WeJ-v2-Kat"/>
+                        <outletCollection property="optionBtns" destination="SVS-La-nGY" collectionClass="NSMutableArray" id="GXG-tB-4Ut"/>
+                        <outletCollection property="optionBtns" destination="lG6-kf-gVQ" collectionClass="NSMutableArray" id="uBF-CA-Lhh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sz-Fg-NlY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="105.69715142428787"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="cy2-GR-iH4">
+            <objects>
+                <viewController storyboardIdentifier="endGameVC" id="yXG-sP-r56" customClass="EndGameViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kx8-Ti-J1r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-xn-7M7">
+                                <rect key="frame" x="28" y="100" width="319" height="467"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Hello “Simran:” ,
+
+Here are the answers selected:
+
+Who is the best cricketer in the world?
+
+Answer: “ Sachin Tendulkar“
+
+What are the colors in the national flag?
+
+Answers : “Orange, White, Green”</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKV-TS-El9">
+                                <rect key="frame" x="18" y="597" width="339" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Ym-zl-hha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="handleRestartBtn:" destination="yXG-sP-r56" eventType="touchUpInside" id="v4K-gT-ZFN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k9J-xn-7M7" firstAttribute="leading" secondItem="Lnz-iH-QYO" secondAttribute="leading" constant="28" id="5Lr-Ka-Mcy"/>
+                            <constraint firstItem="Lnz-iH-QYO" firstAttribute="trailing" secondItem="k9J-xn-7M7" secondAttribute="trailing" constant="28" id="7Ax-AY-0oW"/>
+                            <constraint firstItem="rKV-TS-El9" firstAttribute="top" secondItem="k9J-xn-7M7" secondAttribute="bottom" constant="30" id="BLV-ev-jgR"/>
+                            <constraint firstItem="rKV-TS-El9" firstAttribute="leading" secondItem="Lnz-iH-QYO" secondAttribute="leading" constant="18" id="HjA-YS-EMd"/>
+                            <constraint firstItem="k9J-xn-7M7" firstAttribute="top" secondItem="Lnz-iH-QYO" secondAttribute="top" constant="100" id="NrV-kV-08T"/>
+                            <constraint firstItem="Lnz-iH-QYO" firstAttribute="trailing" secondItem="rKV-TS-El9" secondAttribute="trailing" constant="18" id="fNe-xu-a6X"/>
+                            <constraint firstItem="Lnz-iH-QYO" firstAttribute="bottom" secondItem="k9J-xn-7M7" secondAttribute="bottom" constant="100" id="hJt-Jr-bYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lnz-iH-QYO"/>
+                    </view>
+                    <connections>
+                        <outlet property="summaryTextView" destination="k9J-xn-7M7" id="AWO-Xi-yCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbV-qt-1UJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="109"/>
+        </scene>
+    </scenes>
+</document>

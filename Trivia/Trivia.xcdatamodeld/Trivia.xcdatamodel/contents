@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NewGame" representedClassName="NewGame" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="parentHistoryGame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewHistoryGame" inverseName="games" inverseEntity="NewHistoryGame"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewGameQuestions" inverseName="parentGame" inverseEntity="NewGameQuestions"/>
+    </entity>
+    <entity name="NewGameQuestions" representedClassName="NewGameQuestions" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewOptions" inverseName="parentQuestion" inverseEntity="NewOptions"/>
+        <relationship name="parentGame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewGame" inverseName="questions" inverseEntity="NewGame"/>
+    </entity>
+    <entity name="NewHistoryGame" representedClassName="NewHistoryGame" syncable="YES" codeGenerationType="class">
+        <attribute name="num" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NewGame" inverseName="parentHistoryGame" inverseEntity="NewGame"/>
+    </entity>
+    <entity name="NewOptions" representedClassName="NewOptions" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="parentQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewGameQuestions" inverseName="options" inverseEntity="NewGameQuestions"/>
+    </entity>
+    <elements>
+        <element name="NewGame" positionX="-383.12890625" positionY="-311.70703125" width="128" height="88"/>
+        <element name="NewGameQuestions" positionX="-216.0234375" positionY="-176.80859375" width="128" height="88"/>
+        <element name="NewHistoryGame" positionX="-585.28125" positionY="-177.7578125" width="128" height="73"/>
+        <element name="NewOptions" positionX="-25.37890625" positionY="-160.2265625" width="128" height="73"/>
+    </elements>
+</model>

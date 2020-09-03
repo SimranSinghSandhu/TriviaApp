@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Who is the best cricketer?",
+        "type": "single",
+        "options": [
+            {
+                "title": "A) Sachin Tendulkar"
+            },
+            {
+                "title": "B) Virat Kohli"
+            },
+            {
+                "title" : "C) Adam Gilchirst"
+            },
+            {
+                "title": "D) Jacques Kallis"
+            }
+        ]
+    },
+    {
+        "title": "Which color is available in Indian Flag",
+        "type": "multiple",
+        "options": [
+            {
+                "title": "A) White"
+            },
+            {
+                "title": "B) Yellow"
+            },
+            {
+                "title": "C) Orange"
+            },
+            {
+                "title": "D) Green"
+            }
+        ]
+    }
+]
